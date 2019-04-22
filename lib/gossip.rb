@@ -24,9 +24,5 @@ class Gossip
       return all_gossips
     end
 
-    def self.find(row)
-    puts gossip = CSV.read("./db/gossip.csv")[row.to_i]
-    return gossip
-  end
    
 end 
