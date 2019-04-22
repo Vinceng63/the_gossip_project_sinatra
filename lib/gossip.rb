@@ -24,5 +24,9 @@ class Gossip
       return all_gossips
     end
 
+    def self.find(id) 
+        array_de_gossip = self.all #On récupère l’array  all_gossips de la méthode self.all
+        return array_de_gossip[id-1] #On retourne l’élément de l’array correspondant au numéro de l'id-1 (car les arrays commencent à 0)
+    end
    
 end 

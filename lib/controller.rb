@@ -27,5 +27,7 @@ class ApplicationController < Sinatra::Base
     "Voici le numéro du potin que tu veux : Gossip #{params['id']}!"
   end
 
+  
+
 end
 
