@@ -10,13 +10,13 @@ class Gossip
     end
   
 
-    def save
+    def save #méthode sauvegarde
         CSV.open("./db/gossip.csv", "ab") do |csv|
           csv << [@author, @content]
         end
       end
 
-    def self.all
+    def self.all #méthode d'enregistrement de tous les gossips dans un array
       all_gossips = []
       CSV.read("./db/gossip.csv").each do |csv_line|
         all_gossips << Gossip.new(csv_line[0], csv_line[1])
